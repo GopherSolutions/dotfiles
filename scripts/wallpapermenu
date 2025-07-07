@@ -1,33 +1,27 @@
 #!/usr/bin/env bash
 
-# slightly scuffed wallpaper picker menu for use with pywal - uses nsxiv if installed, otherwise uses dmenu
+# A script i stole from bread and modified to work for my needs.
+# Uses nsxiv to show a wallpaper picker, a choice can be selected with "m" and quit with "q"
+# This script then calls another script I stole from bread and modified
+#
+# This script is called with CMD+W in my keybinds
 
 FOLDER=~/wallpaper # wallpaper folder
 SCRIPT=~/scripts/pywal16 # script to run after wal for refreshing programs, etc.
 
-
+#display menu, save choice
 menu () {
-#		if command -v nsxiv >/dev/null; then 
-				CHOICE=$(nsxiv -otb $FOLDER/*)
-#		else 
-#				CHOICE=$(echo -e "Random\n$(command ls -v $FOLDER)" | dmenu -c -l 15 -i -p "Wallpaper: ")
-#		fi
+	CHOICE=$(nsxiv -otb $FOLDER/*)
 
+#use waypaper to set wallpaper and call updating script based on choice
 case $CHOICE in
-		#Random) wal -i "$FOLDER" -o $SCRIPT ;; # dmenu random option
 		*.*) waypaper --wallpaper "$CHOICE";
 		 wal -i "$CHOICE" -o $SCRIPT ;;
 		*) exit 0 ;;
 esac
 }
 
-# If given arguments:
-# First argument will be used by pywal as wallpaper/dir path
-# Second will be used as theme (use wal --theme to view built-in themes)
-
 case "$#" in
-		0) menu ;;
-		1) wal -i "$1" -o $SCRIPT ;;
-		2) wal -i "$1" --theme $2 -o $SCRIPT ;;
-		*) exit 0 ;;
+    0) menu ;;
+    *) exit 0 ;;
 esac
