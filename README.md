@@ -4,7 +4,7 @@
 git
 kitty
 rofi
-nvim
+vim
 powertop
 auto-cpufreq
 
