@@ -21,6 +21,7 @@ case $CHOICE in
 esac
 }
 
+#call menu
 case "$#" in
     0) menu ;;
     *) exit 0 ;;
