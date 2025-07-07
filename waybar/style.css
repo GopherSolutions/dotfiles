@@ -1,0 +1,174 @@
+@import url('file:///home/gopher/.cache/wal/colors-waybar.css');
+
+@define-color spotify #1DB954;
+@define-color warning #ff0000; 
+@define-color urgent #eed202;
+
+@keyframes blink {
+    to {
+        background-color: @background;
+        color: @color0;
+    }
+}
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+    color: @foreground;
+}
+
+window#waybar {
+    background: transparent;
+	  color: @foreground;
+}
+
+#workspaces {
+    background: @background;
+    opacity: 1;
+    transition: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+#workspaces button, #workspaces button.persistent {
+    background: transparent;
+    color: @color1;
+    transition: none;
+}
+
+#workspaces button.active {
+    background: @color10;
+    color: @color2;
+    border-radius: 5px;
+/*
+    border-top: 2px solid @color1;
+    border-bottom: 2px solid @color1;
+*/
+}
+
+#workspaces button.urgent {
+    background: @urgent;
+    color: @color2;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: @color4;
+    color: @color3;
+    border-radius: 5px;
+}
+
+#taskbar {
+    background: @background;
+    border-radius: 5px;
+    margin: 5px 10px 5px 50px;
+}
+
+tooltip {
+    background: @background;
+    opacity: 0.95;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @color5;
+}
+
+tooltip label{
+    color: @foreground;
+}
+
+#custom-rofi,
+#custom-lock_screen,
+#custom-power,
+#custom-weather,
+#custom-khorshididate,
+#cpu,
+#disk,
+#custom-updates,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#temperature,
+#backlight,
+#language {
+    background: @background;
+    opacity: 1;
+    padding: 0px 5px;
+    margin: 2px 0px 2px 0px;
+}
+
+#disk.critical,
+#temperature.critical  {
+    background-color: @urgent;
+}
+
+#disk.warning,
+#temperature.warning {
+    background-color: @urgent;
+}
+
+#battery {
+    color: @foreground;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#battery.discharging {
+    color: @foreground;
+}
+
+#battery.warning:not(.charging) {
+    background: @warning;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @urgent;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-rofi {
+    color: @color3;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#custom-power {
+    color: @color3;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#clock {
+    border-radius: 0px 5px 5px 0px;
+}
+
+#tray {
+    background: @background;
+    border-radius: 5px;
+    margin: 5px 50px 5px 10px;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.microphone {
+}
+
+#custom-spotify {
+	color: @spotify;
+	padding: 0 20px;
+	margin: 0 10px;
+}

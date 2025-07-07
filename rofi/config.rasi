@@ -1,0 +1,7 @@
+configuration {
+	modi: "drun,run";
+	show-icons: true;
+	icon-theme: "Papirus";
+}
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
