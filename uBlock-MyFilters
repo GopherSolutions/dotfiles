@@ -1,0 +1,24 @@
+twitch.tv##+js(twitch-videoad)
+!__________________________ Google & Youtube Ads __________________________
+# Zero Ads in Youtube Videos | No watermarks, Cards, Info. Nothing! Zilch! Nada!
+||youtube.com/annotations_
+youtube.com##.ytp-ce-element-show
+youtube.com##.ytp-ce-element
+youtube.com##.ytp-cards-teaser-text
+youtube.com##.ytp-cards-button-icon-default
+youtube.com##.annotation-type-text.annotation
+youtube.com##.ytp-scroll-min.ytp-pause-overlay
+youtube.com###offer-module > .ytd-watch.style-scope
+youtube.com##.annotation-type-text.annotation-popup-shape.annotation-shape
+youtube.com##.annotation-type-text.annotation-speech-shape.annotation-shape
+youtube.com##.annotation-type-text.annotation-popup-shape.annotation-shape:nth-of-type(3)
+youtube.com##.annotation-type-text.annotation-popup-shape.annotation-shape:nth-of-type(7)
+youtube.com##.annotation-type-text.annotation-popup-shape.annotation-shape:nth-of-type(5)
+youtube.com##.branding-img-container
+/endscreen.js$script,domain=www.youtube.com
+youtube.com/annotations_
+m.youtube.com##ytm-item-section-renderer.scwnr-content:nth-of-type(1) > lazy-list > .item
+youtube.com###chat
+
+# generic sponsored content eliminator
+~google.com##div.result[id*="sponsored"]
