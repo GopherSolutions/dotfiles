@@ -10,7 +10,7 @@ ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/
 source ~/.config/scripts/thorium-theme.sh
 
 if pgrep "thorium" > /dev/null; then
-	pkill -9 thorium
+	pkill -o thorium
 	sleep 0.2
 	/usr/bin/thorium-browser --restore-last-session &
 fi
