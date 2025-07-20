@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
 ln -sf ~/.cache/wal/colors-kitty.conf ~/.config/kitty/kitty.conf
-ln -sf ~/.cache/wal/colors-waybar.css ~/.config/waybar/style.css
-#ln -sf ~/.cache/wal/colors-vscdoium.json ~/.config/vscodium/
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/
-#ln -sf ~/.cache/wal/
 
 #rekiad qutebrowser if open
-pgrep qutebrowser > /dev/null && qutebrowser ':config-source' #refresh qute if running
+#pgrep qutebrowser > /dev/null && qutebrowser ':config-source' #refresh qute if running
+
+#apply to thorium
+source ~/.config/scripts/thorium-theme.sh
+
+if pgrep "thorium" > /dev/null; then
+	pkill -9 thorium
+	sleep 0.2
+	/usr/bin/thorium-browser --restore-last-session &
+fi
 
 #reload waybar
 pkill waybar

@@ -7,7 +7,7 @@
 # This script is called with CMD+W in my keybinds
 
 FOLDER=~/wallpaper # wallpaper folder
-SCRIPT=~/scripts/pywal16 # script to run after wal for refreshing programs, etc.
+SCRIPT=~/.config/scripts/pywal16 # script to run after wal for refreshing programs, etc.
 
 #display menu, save choice
 menu () {
