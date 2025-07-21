@@ -19,7 +19,7 @@ git config --global credential.helper store
 ```
 ### install basic programs
 ```
-sudo pacman -S rofi ncspot powertop gimp nvim ffmpeg nsxiv waybar imagemagick python3 python-pip hyprpaper fastfetch qt5ct qt6ct kvantum breeze-icons brightnessctl nwg-look ttf-font-awesome ttf-jetbrains-mono-nerd otf-jost virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft bpytop darkroom krita
+sudo pacman -S rofi ncspot powertop gimp nvim ffmpeg nsxiv waybar imagemagick python3 python-pip hyprpaper fastfetch qt5ct qt6ct kvantum breeze-icons brightnessctl nwg-look ttf-font-awesome ttf-jetbrains-mono-nerd virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft bpytop darkroom krita
 ```
 ### remove redundant auto-installed menu
 ```
@@ -32,7 +32,7 @@ cd snapd
 makepkg -si
 sudo systemctl enable --now snapd.socket
 sudo systemctl enable --now snapd.apparmor.service
-sudo ln -s /ver/lib/snapd/snap /snap
+sudo ln -s /var/lib/snapd/snap /snap
 sudo systemctl start snapd.service
 sudo snap install icloud-notes
 ```
@@ -44,7 +44,7 @@ makepkg -si
 ```
 ### install yay-only packages
 ```
-yay -S thorium-browser-bin bibata-cursor-theme procps waypaper python-pywal16 auto-cpufreq
+yay -S thorium-browser-bin bibata-cursor-theme procps waypaper python-pywal16 auto-cpufreq otf-jost
 ```
 ### configure vm stuff
 ```
