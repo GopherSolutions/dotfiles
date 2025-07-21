@@ -17,7 +17,7 @@ NUMBER=$(( RANDOM % ${#wallpapers_array[@]} ))
 CHOICE="${wallpapers_array[$NUMBER]}"
 echo "Selected Wallpaper: $CHOICE"
 
-waypaper "$CHOICE"
+waypaper --wallpaper "$CHOICE"
 wal -i "$CHOICE" -o $SCRIPT
 
 

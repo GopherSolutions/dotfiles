@@ -4,6 +4,10 @@
 @define-color warning #ff0000; 
 @define-color urgent #eed202;
 
+* {
+	font-family: 'JetBrainsMono Nerd Font Propo', 'Jost';
+}
+
 @keyframes blink {
     to {
         background-color: @background;
