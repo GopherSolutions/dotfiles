@@ -1,6 +1,8 @@
+#!/bin/bash
+
 # update system and install git
 sudo pacman -Syu
-sudo pacman -S git
+sudo pacman -S git nvim
 
 # download dotfiles and wallpapers
 git clone https://github.com/GopherSolutions/wallpaper
@@ -10,7 +12,7 @@ git clone https://github.com/GopherSolutions/dotfiles
 sudo pacman -S rofi ncspot powertop gimp nvim ffmpeg nsxiv waybar imagemagick python3 python-pip hyprpaper fastfetch qt5ct qt6ct kvantum breeze-icons brightnessctl nwg-look ttf-font-awesome ttf-jetbrains-mono-nerd otf-jost virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft
 
 # remove redundant auto-installed menu
-sudo pacman -R wofi
+sudo pacman -R wofi nano
 
 # install icloud-notes
 git clone https://aur.archlinux.org/snapd.git
@@ -29,14 +31,3 @@ makepkg -si
 
 # install yay-only packages
 yay -S thorium-browser-bin bibata-cursor-theme procps waypaper python-pywal16 auto-cpufreq
-
-# configure vm stuff
-sudo nvim /etc/libvirt/libvirtd.conf
-	# UNCOMMENT unix_sock_group & unix_sock_rw_perms lines
-sudo nvim /etc/libvirt/qemu.conf
-	# Add user and group to valid users (search "user =")
-sudo systemctl enable libvirtd.service
-sudo systemctl start libvirtd.service
-sudo systemctl enable libvirtd
-sudo systemctl start libvirtd
-sudo usermod -aG libvirt gopher
