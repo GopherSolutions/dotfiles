@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+
+FOLDER=~/wallpaper
+SCRIPT=~/.config/scripts/pywal16
+
+readarray -t wallpapers_array < <(find "$FOLDER" -type f \( -name "*.jpg" -o -name "*.png" \) | shuf)
+
+if [ ${#wallpapers_array[@]} -eq 0 ]; then
+	echo "No wallpapers found"
+	exit 1
+fi
+
+
+NUMBER=$(( RANDOM % ${#wallpapers_array[@]} ))
+
+CHOICE="${wallpapers_array[$NUMBER]}"
+echo "Selected Wallpaper: $CHOICE"
+
+waypaper "$CHOICE"
+wal -i "$CHOICE" -o $SCRIPT
+
+
+
