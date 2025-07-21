@@ -4,10 +4,6 @@
 @define-color warning #ff0000; 
 @define-color urgent #eed202;
 
-* {
-	font-family: 'JetBrainsMono Nerd Font Propo', 'Jost';
-}
-
 @keyframes blink {
     to {
         background-color: @background;
@@ -18,9 +14,9 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "monospace";
+    font-family: "JetBrainsMono Nerd Font Propo";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
     min-height: 0;
     color: @foreground;
 }
