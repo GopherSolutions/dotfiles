@@ -7,6 +7,7 @@ sudo pacman -S git nvim
 # download dotfiles and wallpapers
 git clone https://github.com/GopherSolutions/wallpaper
 git clone https://github.com/GopherSolutions/dotfiles
+cp -R ~/dotfiles ~/.config
 
 # install basic programs
 sudo pacman -S rofi ncspot powertop gimp nvim ffmpeg nsxiv waybar imagemagick python3 python-pip hyprpaper fastfetch qt5ct qt6ct kvantum breeze-icons brightnessctl nwg-look ttf-font-awesome ttf-jetbrains-mono-nerd otf-jost virt-manager qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft
