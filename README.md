@@ -13,9 +13,10 @@ sudo pacman -S git
 git clone https://github.com/GopherSolutions/wallpaper
 git clone https://github.com/GopherSolutions/dotfiles
 ```
-#### i always forget this command so i might as well store it here
+#### i always forget these command so i might as well store them here
 ```
 git config --global credential.helper store
+sudo nvim /etc/security/faillock.conf #set deny = 0
 ```
 ### install basic programs
 ```
