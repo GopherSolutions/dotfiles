@@ -10,8 +10,8 @@ sudo pacman -S git
 ```
 ### download dotfiles and wallpapers
 ```
-git clone https://github.com/GopherSolutions/wallpaper
-git clone https://github.com/GopherSolutions/dotfiles
+git clone https://github.com/rubbishes-xd/wallpaper
+git clone https://github.com/rubbishes-xd/dotfiles
 ```
 #### i always forget these command so i might as well store them here
 ```
